@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+
+    <action name="home" class="com.mystruts.test.action.HomeAction">
+        <result name="success">/WEB-INF/views/index.jsp</result>
+    </action>
+
+    <action name="new" class="com.mystruts.test.action.HomeAction" method="toSave">
+        <result name="success">/WEB-INF/views/save.jsp</result>
+    </action>
+
+    <action name="save" class="com.mystruts.test.action.HomeAction" method="save">
+        <result name="success" type="redirect">/home.action</result>
+    </action>
+
+<!--
+    <action name="book" class="com.mystruts.test.action.TestAction" method="save">
+        <result name="success">/WEB-INF/views/save.jsp</result>
+        <result name="error" type="redirect">/home.action</result>
+    </action>-->
+
+
+</config>
